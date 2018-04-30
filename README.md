@@ -1,6 +1,6 @@
-h1. Apache Docker Proxy
+# Apache Docker Proxy
 
-h2. Usage:
+## Usage:
 
 ```
 docker run -e proxyhost="pie" --link pie -v `pwd`/ssl:/ssl -d --rm -p 80:80 -p 443:443 webserver
