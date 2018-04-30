@@ -5,7 +5,6 @@ RUN apt-get -y -qq update && \
   apt-get -y -qq install apache2 curl tzdata && \
   ln -sf /usr/share/zoneinfo/Europe/London /etc/localtime && \
   dpkg-reconfigure -f noninteractive tzdata && \
-  mkdir -p /ssl && \
   a2enmod rewrite ssl proxy proxy_http && \
   ln -sfT /dev/stderr /var/log/apache2/error.log && \
   ln -sfT /dev/stdout /var/log/apache2/access.log && \
